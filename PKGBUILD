@@ -10,22 +10,22 @@
 
 _name=vlc
 pkgname=vlc-git
-pkgver=r2.2.0.git.644.g2d681f4
+pkgver=r2.2.0.git.645.g345fa6c
 pkgrel=1
 pkgdesc="A multi-platform MPEG, VCD/DVD, and DivX player (GIT Version)"
 arch=('i686' 'x86_64')
 url="http://www.videolan.org/vlc/"
 license=('LGPL2.1' 'GPL2')
-depends=('a52dec' 'faad2' 'ffmpeg' 'git' 'libdca'
-         'libdvbpsi' 'libdvdnav' 'libmad' 'libmatroska' 'libmpcdec'
-         'libmpeg2' 'libproxy' 'libshout' 'libtar' 'libtiger'
-         'libupnp' 'libxinerama' 'libxpm' 'lua' 'qt4'
-         'sdl_image' 'taglib' 'xcb-util-keysyms' 'zvbi')
-makedepends=('aalib' 'flac' 'gnome-vfs' 'kdelibs' 'libavc1394'
-             'libbluray' 'libcaca' 'libdc1394' 'libdvdcss' 'libgme'
-             'libgoom2' 'libmtp' 'libnotify' 'librsvg' 'libssh2'
-             'lirc-utils' 'live-media' 'mesa' 'opus' 'portaudio'
-             'projectm' 'twolame' 'vcdimager' 'xosd')
+depends=('a52dec' 'faad2' 'ffmpeg' 'libdca' 'libdvbpsi'
+         'libdvdnav' 'libmad' 'libmatroska' 'libmpcdec' 'libmpeg2'
+         'libproxy' 'libshout' 'libtar' 'libtiger' 'libupnp'
+         'libxinerama' 'libxpm' 'lua' 'qt4' 'sdl_image'
+         'taglib' 'xcb-util-keysyms' 'zvbi')
+makedepends=('aalib' 'flac' 'git' 'gnome-vfs' 'kdelibs'
+             'libavc1394' 'libbluray' 'libcaca' 'libdc1394' 'libdvdcss'
+             'libgme' 'libgoom2' 'libmtp' 'libnotify' 'librsvg'
+             'libssh2' 'lirc-utils' 'live-media' 'mesa' 'opus'
+             'portaudio' 'projectm' 'twolame' 'vcdimager' 'xosd')
 optdepends=('aalib: for ASCII art plugin'
             'avahi: for service discovery using bonjour protocol'
             'flac: for Free Lossless Audio Codec plugin'
@@ -73,7 +73,6 @@ pkgver() {
 prepare() {
   cd "${srcdir}/${_name}"
 
-  sed -i -e 's:truetype/freefont:TTF:g' modules/text_renderer/freetype.c
   sed -i -e 's:truetype/ttf-dejavu:TTF:g' modules/visualization/projectm.cpp
 }
 
