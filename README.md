@@ -2,4 +2,4 @@
 # vlc-git
 
 ### Installation
-If you have [cower](https://github.com/falconindy/cower) installed: `cower -d vlc-git && cd vlc-git && makepkg -i`
+Refer to: [https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages)
